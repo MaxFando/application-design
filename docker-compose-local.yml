@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app.dockerfile
+    restart: no
+    ports:
+      - "8080:${HTTP_PORT:-80}"
